@@ -11,7 +11,7 @@ public class LectureRoom extends EducationalRoom{
 		numberOfSeats = ns;
 	}
 	
-	public static void main(String args[]){
+	public void opens(){
 		EducationalRoom educationalRoom = new EducationalRoom(1, 11);
 		educationalRoom.open("LectureRoom opens!");
 	}

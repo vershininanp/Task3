@@ -15,7 +15,7 @@ public class EducationalRoom extends DepartmentRoom{
 		System.out.println(s);
 	}
 	
-	@Override
+	/*@Override
 	public boolean equals(Object obj) {
 		if (this == obj)
 			return true;
@@ -27,5 +27,5 @@ public class EducationalRoom extends DepartmentRoom{
 		if (this.numberOfRoom != edRoom.numberOfRoom)
 			return false;		
 
-	}
+	}*/
 }

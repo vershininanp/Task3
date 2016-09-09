@@ -15,18 +15,22 @@ public class DeansOffice extends EducationalRoom implements TimetableRoom{
 		super(floor, numberOfRoom);	
 		nameDean = nd;
 		timetableRoom = new TimetableRoomImpl(hourStarted, hourShutdown);
-	}		
+	}
 	
 	@Override
 	public int getWorkdaySize(){
 		return hourShutdown - hourStarted;
+	}	
+	
+	public void opens(){
+		EducationalRoom educationalRoom = new EducationalRoom(1, 11);		
+		educationalRoom.open("DeansOffice opens!");	
 	}
 	
-	public static void main(String args[]){
-		EducationalRoom educationalRoom = new EducationalRoom(1, 11);		
-		educationalRoom.open("DeansOffice opens!");
+	public void printWorkdaySize(){
 		DeansOffice deansOffice = new DeansOffice(1, 11, "Ivanov");
-		System.out.println(deansOffice.getWorkdaySize());
+		System.out.println(deansOffice.getWorkdaySize());	
 	}
+	
 		
 }
