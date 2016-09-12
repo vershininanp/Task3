@@ -1,6 +1,6 @@
 package src.TimetableRoom;
 
-public interface TimetableRoom{
+public interface TimetableRoom {
 		
 	int getWorkdaySize();
 	

@@ -4,33 +4,26 @@ import src.EducationalRoom.EducationalRoom;
 import src.TimetableRoom.TimetableRoom;
 import src.TimetableRoomImpl.TimetableRoomImpl;
 
-public class DeansOffice extends EducationalRoom implements TimetableRoom{
+public class DeansOffice extends EducationalRoom implements TimetableRoom {
 	
 	String nameDean;
 	TimetableRoomImpl timetableRoom;
-	static Integer hourStarted = 8;
-	static Integer hourShutdown = 17;	
+	static final Integer GET_HOUR_STARTED = 8;
+	static final Integer GET_HOUR_SHUTDOWN = 17;	
 	
-	public DeansOffice(int floor, int numberOfRoom, String nd){
+	public DeansOffice(int floor, int numberOfRoom, String nd) {
 		super(floor, numberOfRoom);	
 		nameDean = nd;
-		timetableRoom = new TimetableRoomImpl(hourStarted, hourShutdown);
+		timetableRoom = new TimetableRoomImpl(GET_HOUR_STARTED, GET_HOUR_SHUTDOWN);
 	}
 	
 	@Override
-	public int getWorkdaySize(){
-		return hourShutdown - hourStarted;
+	public int getWorkdaySize() {
+		return GET_HOUR_STARTED - GET_HOUR_SHUTDOWN;
 	}	
 	
-	public void opens(){
-		EducationalRoom educationalRoom = new EducationalRoom(1, 11);		
-		educationalRoom.open("DeansOffice opens!");	
+	public void open() {
+		System.out.println("DeansOffice opens!");	
 	}
 	
-	public void printWorkdaySize(){
-		DeansOffice deansOffice = new DeansOffice(1, 11, "Ivanov");
-		System.out.println(deansOffice.getWorkdaySize());	
-	}
-	
-		
 }
