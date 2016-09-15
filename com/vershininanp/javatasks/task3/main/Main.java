@@ -1,10 +1,10 @@
-package src.Main;
+package com.vershininanp.javatasks.task3.main;
 
 import java.util.*;
-import src.DepartmentRoom.DepartmentRoom;
-import src.EducationalRoom.EducationalRoom;
-import src.DeansOffice.DeansOffice;
-import src.LectureRoom.LectureRoom;
+import com.vershininanp.javatasks.task3.departmentroom.DepartmentRoom;
+import com.vershininanp.javatasks.task3.educationalroom.EducationalRoom;
+import com.vershininanp.javatasks.task3.deansoffice.DeansOffice;
+import com.vershininanp.javatasks.task3.lectureroom.LectureRoom;
 
 
 public class Main {
@@ -14,7 +14,7 @@ public class Main {
 											new DeansOffice(1, 10, "Ivanov"), new DeansOffice(1, 11, "Petrov"), 
 											new LectureRoom(1, 10, 15), new LectureRoom(1, 11, 10)};
 											
-		ArrayList<LectureRoom> lectureRooms = new ArrayList();
+		ArrayList lectureRooms = new ArrayList();
 		
 		for(int i = 0; i < departmentRooms.length; i++)	{
 			departmentRooms[i].open();

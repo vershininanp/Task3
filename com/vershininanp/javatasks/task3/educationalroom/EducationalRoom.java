@@ -1,6 +1,6 @@
-package src.EducationalRoom;
+package com.vershininanp.javatasks.task3.educationalroom;
 
-import src.DepartmentRoom.DepartmentRoom;
+import com.vershininanp.javatasks.task3.departmentroom.DepartmentRoom;
 
 public class EducationalRoom extends DepartmentRoom {
 	
@@ -15,9 +15,9 @@ public class EducationalRoom extends DepartmentRoom {
 	
 	}	
 
-	public void getNumberOfRoom(){
+	/*public int getNumberOfRoom(){
 		return numberOfRoom;
-	}
+	}*/
 	
 	@Override
 	public boolean equals(Object obj) {
@@ -29,15 +29,17 @@ public class EducationalRoom extends DepartmentRoom {
 			return false;
 		}
 		
-		if (getClass() != obj.getClass()) {
+		if (this.getClass() != obj.getClass()) {
 			return false;
 		}
 		
 		EducationalRoom edRoom = (EducationalRoom) obj;
-		if (numberOfRoom != edRoom.getNumberOfRoom){
+		if (this.numberOfRoom != edRoom.numberOfRoom){
 			return false;
 		}
 		
 		return true;
 	}
+
+
 }

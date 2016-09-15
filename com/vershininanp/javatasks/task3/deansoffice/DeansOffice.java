@@ -1,8 +1,8 @@
-package src.DeansOffice;
+package com.vershininanp.javatasks.task3.deansoffice;
 
-import src.EducationalRoom.EducationalRoom;
-import src.TimetableRoom.TimetableRoom;
-import src.TimetableRoomImpl.TimetableRoomImpl;
+import com.vershininanp.javatasks.task3.educationalroom.EducationalRoom;
+import com.vershininanp.javatasks.task3.timetableroom.TimetableRoom;
+import com.vershininanp.javatasks.task3.timetableroomimpl.TimetableRoomImpl;
 
 public class DeansOffice extends EducationalRoom implements TimetableRoom {
 	
@@ -15,11 +15,10 @@ public class DeansOffice extends EducationalRoom implements TimetableRoom {
 		super(floor, numberOfRoom);	
 		nameDean = nd;
 		timetableRoom = new TimetableRoomImpl(GET_HOUR_STARTED, GET_HOUR_SHUTDOWN);
-	}
+	}	
 	
-	@Override
 	public int getWorkdaySize() {
-		timetableRoom.getWorkdaySize();
+		return timetableRoom.getWorkdaySize();
 	}	
 	
 	public void open() {
