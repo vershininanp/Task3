@@ -11,7 +11,7 @@ public class DeansOffice extends EducationalRoom implements TimetableRoom {
 	static final Integer GET_HOUR_STARTED = 8;
 	static final Integer GET_HOUR_SHUTDOWN = 17;	
 	
-	public DeansOffice(int floor, int numberOfRoom, String nd) {
+	public DeansOffice(int floor, String numberOfRoom, String nd) {
 		super(floor, numberOfRoom);	
 		nameDean = nd;
 		timetableRoom = new TimetableRoomImpl(GET_HOUR_STARTED, GET_HOUR_SHUTDOWN);
