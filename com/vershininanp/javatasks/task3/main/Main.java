@@ -23,7 +23,7 @@ public class Main {
 				//compare number of room and exception
 				for(int j = 0; (j < departmentRooms.length) && (j != i); j++) {
 					if((departmentRooms[i].equals(departmentRooms[j])) && (departmentRooms[i].getClass() != departmentRooms[j].getClass())) {
-						throw new MyException();
+						throw new DublicateException("Exception! There was a duplicate of the room!");
 					} 
 				}
 								
@@ -40,14 +40,21 @@ public class Main {
 			System.out.println("NullPointerException!"); 
 			return;
 			
-		}  catch (MyException ex) { 
-			new MyException().MyException();				
+		}  catch (DublicateException ex) { 
+			System.out.println(ex.getMessage());				
 		}
 	}
 }
 
-class MyException extends Exception {
-	public void MyException() {
-		System.out.println ("New exception!"); 
+class DublicateException extends Exception {
+	
+	String message;
+	
+	public DublicateException(String msg) {
+		message = msg;
+	}
+	
+	public String getMessage(){
+		return message;
 	}
 }
